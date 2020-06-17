@@ -3,24 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 
-    <title>Work Day Scheduler</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <title>Work Day Scheduler</title>
   </head>
 
   <body>
@@ -30,48 +33,112 @@
       <div class="col col-12 col-md-12">
         <p> 
         <h2 id='today'>Today's Date is: </h2>
-        <h3 id='timeNow'>Current Time is: </h3>
+        <!-- <h3 id='timeNow'>Current Time is: </h3> -->
         </p>
-  </header>
-  <div class="calendar-container">
-    <h1 id ='calendar-heading'>Your Work Day</h1>
-    <!-- heading -->
-    <div class= "row">
-    </div>
-  
-  </div>
-  <!-- row end -->
-  
-  <!-- calendar body - hours, events -->
+    </header>
+    <form>
+      <div class="table-responsive table-bordered">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Task</th>
+              <th scope="col">control</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="form.row" id="row">8:00</th>
+              <td><input type="text" class="form-control" id="0800" placeholder="NEW TASK"></td>
+              <td><button type="save" class="btn btn-primary">SAVE</button>
+                <button type="delete" class="btn btn-danger">DELETE</button>
+                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              </td>
+            </tr>
+            <tr>
+              <th scope="form.row" id="row">9:00</th>
+              <td><input type="text" class="form-control" id="0900" placeholder="NEW TASK"></td>
+              <td><button type="save" class="btn btn-primary">SAVE</button>
+                <button type="delete" class="btn btn-danger">DELETE</button>
+                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              </td>
+            </tr>
+            <tr>
+              <th scope="form.row" id="row">10:00</th>
+              <td><input type="text" class="form-control" id="1000" placeholder="NEW TASK"></td>
+              <td><button type="save" class="btn btn-primary">SAVE</button>
+                <button type="delete" class="btn btn-danger">DELETE</button>
+                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              </td>
+            </tr><tr>
+              <th scope="form.row" id="row">11:00</th>
+              <td><input type="text" class="form-control" id="1100" placeholder="NEW TASK"></td>
+              <td><button type="save" class="btn btn-primary">SAVE</button>
+                <button type="delete" class="btn btn-danger">DELETE</button>
+                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              </td>
+            </tr>
+            <tr>
+              <th scope="form.row" id="row">12:00</th>
+              <td><input type="text" class="form-control" id="1200" placeholder="NEW TASK"></td>
+              <td><button type="save" class="btn btn-primary">SAVE</button>
+                <button type="delete" class="btn btn-danger">DELETE</button>
+                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              </td>
+            </tr><tr>
+              <th scope="form.row" id="row">13:00</th>
+              <td><input type="text" class="form-control" id="1300" placeholder="NEW TASK"></td>
+              <td><button type="save" class="btn btn-primary">SAVE</button>
+                <button type="delete" class="btn btn-danger">DELETE</button>
+                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              </td>
+            </tr>
+            <tr>
+              <th scope="form.row" id="row">14:00</th>
+              <td><input type="text" class="form-control" id="1400" placeholder="NEW TASK"></td>
+              <td><button type="save" class="btn btn-primary">SAVE</button>
+                <button type="delete" class="btn btn-danger">DELETE</button>
+                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              </td>
+            </tr>
+            <tr>
+              <th scope="form.row" id="row">15:00</th>
+              <td><input type="text" class="form-control" id="1500" placeholder="NEW TASK"></td>
+              <td><button type="save" class="btn btn-primary">SAVE</button>
+                <button type="delete" class="btn btn-danger">DELETE</button>
+                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              </td>
+            </tr>
+            <tr>
+              <th scope="form.row" id="row">16:00</th>
+              <td><input type="text" class="form-control" id="1600" placeholder="NEW TASK"></td>
+              <td><button type="save" class="btn btn-primary">SAVE</button>
+                <button type="delete" class="btn btn-danger">DELETE</button>
+                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+ 
 
-  <table id= "schedule-table">
-  <div class= "row" id="daily-schedule-selector">
-  <div class="col col-3 col-md-3" id ="schedule-rows header"><h3 id='hoursList'>hours</h2>
-  <p id="hours-view">hours here: </p>
-  </div>
 
-  <div class="col col-3 col-md-3" id ="schedule-rows header"><h4 id="events">events</h4><form><input text='events'>Events</placeholder></form>
-  <p id="events-view">events here: </p>
-  </div>
 
-  <div class="col col-3 col-md-3"id ="schedule-rows button"><h5 id="saveBtn">Save Event</h5>
-  <button class="saveBtn" id="save-view">save buttons here: </button>
-  </div>
-  
-  <div class="col col-3 col-md-3" id="schedule-rows button"><h5 id="completeBtn">Complete Event</h5>
-  <button id="complete-view">complete buttons here: </button>  
-  </div>
-  <!-- </div> row end -->
-  </div>  
-  </table>
-  
-  
-  
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./script.js"></script>
   <script src="./moment.js"></script>
+  
   </body>
   </html>
 
