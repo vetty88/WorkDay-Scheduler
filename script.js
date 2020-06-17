@@ -1,20 +1,82 @@
 $(document).ready(function() {
-    
-var today = (moment().format('Do MMMM YYYY'));
-var time = (moment().format('HH')); 
-var rows = ['0800', '0900', '1000', '1100', '1200', '1300', '1400', '1500', '1600', '1700', '1800'];
-         
 
+        var today = (moment().format('Do MMMM YYYY'));
+        var time = (moment().format('HH:MM')); 
+        var rows = ['0800', '0900', '1000', '1100', '1200', '1300', '1400', '1500', '1600', '1700', '1800'];
+        var row = document.getElementById("#row".innerText);
+        var rowString = JSON.stringify(row);   
+        
 
-console.log(today);
-console.log(time);
-console.log(rows.length);
+        $("#today").append(today);
+        $("#timeNow").append(time);
 
-$("#today").append(today);
-$("#timeNow").append(time);
+        console.log(today);
+        console.log(time);
+        console.log(rows.length);
+        console.log(row);
+        console.log(rowString);
+        
+        function getInnerText() {
+                alert(document.getElementById("#demo").innerText)
+        }
+
+        function getHTML() {
+                alert(document.getElementById("#demo").innerHTML)
+        }
+
+        function getTextContent() {
+                alert(document.getElementById("#demo").textContent)
+        }
+
+        getInnerText();
+        getHTML();
+        getTextContent();
+
+var nowHr = moment().format('l h:mm');
+        console.log(nowHr);
+        $rows = $("id$='row'");
+        console.log($rows);
+        $times = $rows.children
+        $rows.parent().css("background-color", "rgba(203, 231, 57, 0.37)");
+
 });
 
-for ()
+// function classPush(){
+//         classNames.push('present' + current.hours() + (this.step == 4 ? '-h' + (current.hours() + 4) : '')); 
+//         classNames.push(today(current)); 
+//         classNames.push(even(current.hours())); 
+//         };
+// classPush();
+
+// // function highlightCurrentTime() {
+// //         if (row.content("") < ("time"))
+// //         {row.color = "red"}};
+// // highlightCurrentTime();
+
+// function greeting() {
+//         greeting;
+//         if (timeHR < 20) {
+//         demo.greeting = "Good day";
+//         } else {
+//         greeting = "Good evening";
+//         };
+// };
+// myFunction();
+
+
+// var greeting = $("#demo").append(greeting);
+
+
+// function rowTimeFormat(){
+//         for (i = 0; i row.length; i++);
+//         if (row < time)
+//         {rowHighlight= true,
+//          else 
+//          {rowHighlight= false}};
+// rowTimeFormat()
+// )};
+
+
 
 // for(i = 0; i < rows.length; i++)      
 
