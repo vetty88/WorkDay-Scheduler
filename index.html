@@ -36,7 +36,7 @@
         <p> 
         <h2 id='today'>Today's Date is: </h2>
         <h3 id='timeNow'>Current Time is: </h3>
-        <h4 id='demo'>This element has extra spacing     and contains <span>a span element</span></h4>
+        <em><h4 id='demo'>Greetings!</h4></em>
         </p>
     </header>
     <form>
@@ -47,80 +47,100 @@
               <th scope="col">Time</th>
               <th scope="col">Task</th>
               <th scope="col">control</th>
-              
             </tr>
           </thead>
+          
           <tbody>
             <tr>
-              <th scope="form.row" id="row">8:00 </th>
-              <td><input type="text" class="form-control" id="0800" placeholder="NEW TASK"></td>
-              <td><button type="save" class="btn btn-primary">SAVE</button>
-                <button type="delete" class="btn btn-danger">DELETE</button>
-                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              <th scope="form.row" id="8" class="row time-block">08:00</th>
+              <td><textarea id="row-8.storage" class="form-control" id="0800"></textarea></td>
+              <td><button type="save" id="saveBtn" class="btn btn-primary">SAVE</button>
+                <button type="delete" id ="deleteBtn" class="btn btn-danger">DELETE</button>
+                <button type="complete" id ="completeBtn"class="btn btn-success">COMPLETE</button> 
               </td>
             </tr>
+            
             <tr>
-              <th scope="form.row" id="row">9:00 </th>
-              <td><input type="text" class="form-control" id="0900" placeholder="NEW TASK"></td>
+              <th scope="form.row" id="9" class="row time-block">09:00</th>
+              <td><textarea id="row-9.storage" class="form-control" id="0900"></textarea></td>
               <td><button type="save" class="btn btn-primary">SAVE</button>
                 <button type="delete" class="btn btn-danger">DELETE</button>
                 <button type="complete" class="btn btn-success">COMPLETE</button> 
               </td>
             </tr>
+            
             <tr>
-              <th scope="form.row" id="row">10:00</th>
-              <td><input type="text" class="form-control" id="1000" placeholder="NEW TASK"></td>
-              <td><button type="save" class="btn btn-primary">SAVE</button>
-                <button type="delete" class="btn btn-danger">DELETE</button>
-                <button type="complete" class="btn btn-success">COMPLETE</button> 
-              </td>
-            </tr><tr>
-              <th scope="form.row" id="row">11:00</th>
-              <td><input type="text" class="form-control" id="1100" placeholder="NEW TASK"></td>
-              <td><button type="save" class="btn btn-primary">SAVE</button>
-                <button type="delete" class="btn btn-danger">DELETE</button>
-                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              <th scope="form.row" id="10" class="row time-block">10:00</th>
+              <td><textarea id="row-10.storage" class="form-control" id="1000"></textarea></td>
+              <td><button type="save" id = saveBtn class="btn btn-primary">SAVE</button>
+                <button type="delete" id = deleteBtn class="btn btn-danger">DELETE</button>
+                <button type="complete" id = completeBtn class="btn btn-success">COMPLETE</button> 
               </td>
             </tr>
+            
             <tr>
-              <th scope="form.row" id="row">12:00</th>
-              <td><input type="text" class="form-control" id="1200" placeholder="NEW TASK"></td>
-              <td><button type="save" class="btn btn-primary">SAVE</button>
-                <button type="delete" class="btn btn-danger">DELETE</button>
-                <button type="complete" class="btn btn-success">COMPLETE</button> 
-              </td>
-            </tr><tr>
-              <th scope="form.row" id="row">13:00</th>
-              <td><input type="text" class="form-control" id="1300" placeholder="NEW TASK"></td>
-              <td><button type="save" class="btn btn-primary">SAVE</button>
-                <button type="delete" class="btn btn-danger">DELETE</button>
-                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              <th scope="form.row" id="11" class="row time-block">11:00</th>
+              <td><textarea id="row-11.storage" class="form-control" id="1100"></textarea></td>
+              <td><button type="save" id = saveBtn class="btn btn-primary">SAVE</button>
+                <button type="delete" id = deleteBtn class="btn btn-danger">DELETE</button>
+                <button type="complete" id = completeBtn class="btn btn-success">COMPLETE</button> 
               </td>
             </tr>
+            
             <tr>
-              <th scope="form.row" id="row">14:00</th>
-              <td><input type="text" class="form-control" id="1400" placeholder="NEW TASK"></td>
-              <td><button type="save" class="btn btn-primary">SAVE</button>
-                <button type="delete" class="btn btn-danger">DELETE</button>
-                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              <th scope="form.row" id="12" class="row time-block">12:00</th>
+              <td><textarea id="row-12.storage" class="form-control" id="1200"></textarea></td>
+              <td><button type="save" id = saveBtn class="btn btn-primary">SAVE</button>
+                <button type="delete" id = deleteBtn class="btn btn-danger">DELETE</button>
+                <button type="complete" id = completeBtn class="btn btn-success">COMPLETE</button> 
               </td>
             </tr>
+            
             <tr>
-              <th scope="form.row" id="row">15:00</th>
-              <td><input type="text" class="form-control" id="1500" placeholder="NEW TASK"></td>
-              <td><button type="save" class="btn btn-primary">SAVE</button>
-                <button type="delete" class="btn btn-danger">DELETE</button>
-                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              <th scope="form.row" id="13" class="row time-block">13:00</th>
+              <td><textarea id= "row-13.storage" class="form-control" id="1300"></textarea></td>
+              <td><button type="save" id = saveBtn class="btn btn-primary">SAVE</button>
+                <button type="delete" id = deleteBtn class="btn btn-danger">DELETE</button>
+                <button type="complete" id = completeBtn class="btn btn-success">COMPLETE</button> 
               </td>
             </tr>
+            
             <tr>
-              <th scope="form.row" id="row">16:00</th>
-              <td><input type="text" class="form-control" id="1600" placeholder="NEW TASK"></td>
-              <td><button type="save" class="btn btn-primary">SAVE</button>
-                <button type="delete" class="btn btn-danger">DELETE</button>
-                <button type="complete" class="btn btn-success">COMPLETE</button> 
+              <th scope="form.row" id="14" class="row time-block">14:00</th>
+              <td><textarea id="row-14.storage" class="form-control" id="1400"></textarea></td>
+              <td><button type="save" id = saveBtn class="btn btn-primary">SAVE</button>
+                <button type="delete" id = deleteBtn class="btn btn-danger">DELETE</button>
+                <button type="complete" id = completeBtn class="btn btn-success">COMPLETE</button> 
               </td>
             </tr>
+            
+            <tr>
+              <th scope="form.row" id="15" class="row time-block">15:00</th>
+              <td><textarea id="row-15.storage" class="form-control" id="1500"></textarea></td>
+              <td><button type="save" id = saveBtn class="btn btn-primary">SAVE</button>
+                <button type="delete" id = deleteBtn class="btn btn-danger">DELETE</button>
+                <button type="complete" id = completeBtn class="btn btn-success">COMPLETE</button> 
+              </td>
+            </tr>
+            
+            <tr>
+              <th scope="form.row" id="16" class="row time-block">16:00</th>
+              <td><textarea id="row-16.storage" class="form-control" id="1600"></textarea></td>
+              <td><button type="save" id = saveBtn class="btn btn-primary">SAVE</button>
+                <button type="delete" id = deleteBtn class="btn btn-danger">DELETE</button>
+                <button type="complete" id = completeBtn class="btn btn-success">COMPLETE</button> 
+              </td>
+            </tr>
+            
+            <tr>
+              <th scope="form.row" id="17" class="row time-block">17:00</th>
+              <td><textarea id="row-17.storage" class="form-control" id="1600"></textarea></td>             
+              <td><button type="save" id = saveBtn class="btn btn-primary">SAVE</button>
+                <button type="delete" id = deleteBtn class="btn btn-danger">DELETE</button>
+                <button type="complete" id = completeBtn class="btn btn-success">COMPLETE</button> 
+              </td>
+            </tr>
+          
           </tbody>
         </table>
       </div>
