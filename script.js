@@ -65,10 +65,14 @@ $(document).ready(function() {
 function newFunction() {
     $(".btn-primary").click(function () {
         event.preventDefault();
-        var text = parseInt($(this).parent('tr').attr("textarea"));
-        console.log(text);
-        var time = parseInt($(this).parent('tr').attr("id"));
-        console.log(time);
+        var rowTd = $(this).parents();
+        console.log("rowTd", rowTd);
+        var text = rowTd.find("textarea").val();
+        console.log("textarea",text);
+        var time2 = $(this).find("th");
+        console.log("th", time2);
+        var time = time2.find("id");
+        console.log("th#", time);
         localStorage.setItem(time, text);
     
     $("row-8 storage").val(localStorage.getItem("8"));
@@ -86,10 +90,10 @@ function newFunction() {
 
     console.log(localStorage);
 
-    // $(".btn-danger").click(function () {
-    // $("textarea").val("")});
+    $(".btn-danger").click(function () {
+    $("textarea").val("")});
 
-    // $(".btn-success").click(function () {
-    //     $(this).parent('tr').addClass("complete")}
+    $(".btn-success").click(function () {
+        $(this).parent('tr').addClass("complete")}
     
-    };
+    )};
