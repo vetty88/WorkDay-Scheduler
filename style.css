@@ -57,6 +57,11 @@ textarea{
   color: white;
 }
 
+.complete {
+  background-color: rgb(250, 177, 232);
+  text-decoration: line-through;
+}
+
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;

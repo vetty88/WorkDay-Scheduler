@@ -64,26 +64,32 @@ $(document).ready(function() {
 
 function newFunction() {
     $(".btn-primary").click(function () {
-        var row = this.parents('tr');
-        var text = row.find("textarea");
-        var time = this.parents.attr("id");
+        event.preventDefault();
+        var text = parseInt($(this).parent('tr').attr("textarea"));
         console.log(text);
+        var time = parseInt($(this).parent('tr').attr("id"));
         console.log(time);
         localStorage.setItem(time, text);
+    
+    $("row-8 storage").val(localStorage.getItem("8"));
+    $("row-9 storage").val(localStorage.getItem("9"));
+    $("row-10 storage").val(localStorage.getItem("10"));
+    $("row-11 storage").val(localStorage.getItem("11"));
+    $("row-12 storage").val(localStorage.getItem("12"));
+    $("row-13 storage").val(localStorage.getItem("13"));
+    $("row-14 storage").val(localStorage.getItem("14"));
+    $("row-15 storage").val(localStorage.getItem("15"));
+    $("row-16 storage").val(localStorage.getItem("16"));
+    $("row-17 storage").val(localStorage.getItem("17"));
+
     });
 
-    $("#9 .storage").val(localStorage.getItem("9"));
-    $("#10 .storage").val(localStorage.getItem("10"));
-    $("#11 .storage").val(localStorage.getItem("11"));
-    $("12 .storage").val(localStorage.getItem("12"));
-    $("#13 .storage").val(localStorage.getItem("13"));
-    $("#14 .storage").val(localStorage.getItem("14"));
-    $("#15 .storage").val(localStorage.getItem("15"));
-    $("#16 .storage").val(localStorage.getItem("16"));
-    $("#17 .storage").val(localStorage.getItem("17"));
+    console.log(localStorage);
 
-    $(".btn-danger").click(function () {
-        $("textarea").val("");
-    });
-}
+    // $(".btn-danger").click(function () {
+    // $("textarea").val("")});
 
+    // $(".btn-success").click(function () {
+    //     $(this).parent('tr').addClass("complete")}
+    
+    };
