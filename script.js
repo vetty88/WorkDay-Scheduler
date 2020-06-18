@@ -29,7 +29,8 @@ $(document).ready(function() {
                 document.getElementById("demo").innerHTML = greeting;
                 }
                 greeting();
-
+    
+                
     function colorChange() {
         // creating current hour
 
@@ -61,39 +62,60 @@ $(document).ready(function() {
     newFunction();
 });
 
-
 function newFunction() {
     $(".btn-primary").click(function () {
         event.preventDefault();
-        var rowTd = $(this).parents();
+
+
+        var directParent = $(this).parent();
+        console.log("directParent", directParent);
+        var th = directParent.siblings("th");
+        console.log("th", th);
+        var time = th.attr("id");
+        console.log("time", time);
+        console.log("time");
+        console.log(time);
+        var rowTd = directParent.parent();
         console.log("rowTd", rowTd);
         var text = rowTd.find("textarea").val();
-        console.log("textarea",text);
-        var time2 = $(this).find("th");
-        console.log("th", time2);
-        var time = time2.find("id");
-        console.log("th#", time);
+        console.log(text);
         localStorage.setItem(time, text);
+    })}
+
+    // jQuery(function ($) {
+    //     if (typeof (window.localStorage) != "undefined") {
+    //         $('#load').on('load', function(){
+    //             $('input[type="text"]').each(function(){    
+    //                    $(this).val(text);
+            
     
-    $("row-8 storage").val(localStorage.getItem("8"));
-    $("row-9 storage").val(localStorage.getItem("9"));
-    $("row-10 storage").val(localStorage.getItem("10"));
-    $("row-11 storage").val(localStorage.getItem("11"));
-    $("row-12 storage").val(localStorage.getItem("12"));
-    $("row-13 storage").val(localStorage.getItem("13"));
-    $("row-14 storage").val(localStorage.getItem("14"));
-    $("row-15 storage").val(localStorage.getItem("15"));
-    $("row-16 storage").val(localStorage.getItem("16"));
-    $("row-17 storage").val(localStorage.getItem("17"));
+    // // //         // will get value of specific id from the browser localStorage and set to the input 
+    // //         $("textarea").val(function () {
+    // //             return localStorage.getItem('key');
+    // //         });
+    //             })})}})
+    // //         // will set values in browser localStorage for further reference
+    // //         $("input[type=text]").on("change", function () {
+    // //             localStorage.setItem(this.id, $(this).val());
+    // //         });
+    // //     }
+    // // });
 
-    });
-
-    console.log(localStorage);
-
-    $(".btn-danger").click(function () {
-    $("textarea").val("")});
-
-    $(".btn-success").click(function () {
-        $(this).parent('tr').addClass("complete")}
+        $("textarea").val(localStorage.getItem("8"))
+    // $("textarea").each(val){localStorage.getItem("time"));
+    // $("#row-10 .storage").val(localStorage.getItem("10"));
+    // $("#row-11 .storage").val(localStorage.getItem("11"));
+    // $("#row-12 .storage").val(localStorage.getItem("12"));
+    // $("#row-13 .storage").val(localStorage.getItem("13"));
+    // $("#row-14 .storage").val(localStorage.getItem("14"));
+    // $("#row-15 .storage").val(localStorage.getItem("15"));
+    // $("#row-16 .storage").val(localStorage.getItem("16"));
+    // $("#row-17 .storage").val(localStorage.getItem("17"));
     
-    )};
+    // // $(".btn-danger").click(function () {
+    // $("textarea").val("")});
+
+    // $(".btn-success").click(function () {
+    //     $(this).parent('tr').addClass("complete")}
+    
+    
