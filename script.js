@@ -58,14 +58,14 @@ $(document).ready(function() {
     }
 
     colorChange();
-
-    newFunction();
+    saveFunction();
+    deleteFunction();
+    
 });
 
-function newFunction() {
+function saveFunction() {
     $(".btn-primary").click(function () {
         event.preventDefault();
-
 
         var directParent = $(this).parent();
         console.log("directParent", directParent);
@@ -80,42 +80,92 @@ function newFunction() {
         var text = rowTd.find("textarea").val();
         console.log(text);
         localStorage.setItem(time, text);
-    })}
+    })
 
-    // jQuery(function ($) {
-    //     if (typeof (window.localStorage) != "undefined") {
-    //         $('#load').on('load', function(){
-    //             $('input[type="text"]').each(function(){    
-    //                    $(this).val(text);
-            
+    $("#row-8").val(localStorage.getItem("8"));
+    $("#row-9").val(localStorage.getItem("9"));
+    $("#row-10").val(localStorage.getItem("10"));
+    $("#row-11").val(localStorage.getItem("11"));
+    $("#row-12").val(localStorage.getItem("12"));
+    $("#row-13").val(localStorage.getItem("13"));
+    $("#row-14").val(localStorage.getItem("14"));
+    $("#row-15").val(localStorage.getItem("15"));
+    $("#row-16").val(localStorage.getItem("16"));
+    $("#row-17").val(localStorage.getItem("17"));
+
+    console.log(localStorage);
+    console.log(window.localStorage);
+
+$(function deleteFunction() {
+    $(".btn-danger").click(function () {
+        
+        var directParent = $(this).parent();
+        console.log("directParent", directParent);
+        var th = directParent.siblings("th");
+        console.log("th", th);
+        var time = th.attr("id");
+        console.log("time", time);
+        console.log("time");
+        console.log(time);
+        var rowTd = directParent.parent();
+        console.log("rowTd", rowTd);
+        var text = rowTd.find("textarea").val();
+        console.log(text);
+        window.localStorage.removeItem(time, text);
+        location.reload(true);
+    })
+
+    ("#row-8")(window.localStorage.removeItem("8"));
+    ("#row-9")(window.localStorage.removeItem("9"));
+    ("#row-10")(window.localStorage.removeItem("10"));
+    ("#row-11")(window.localStorage.removeItem("11"));
+    ("#row-12")(window.localStorage.removeItem("12"));
+    ("#row-13")(window.localStorage.removeItem("13"));
+    ("#row-14")(window.localStorage.removeItem("14"));
+    ("#row-15")(window.localStorage.removeItem("15"));
+    ("#row-16")(window.localStorage.removeItem("16"));
+    ("#row-17")(window.localStorage.removeItem("17"));
+    });
+
     
-    // // //         // will get value of specific id from the browser localStorage and set to the input 
-    // //         $("textarea").val(function () {
-    // //             return localStorage.getItem('key');
-    // //         });
-    //             })})}})
-    // //         // will set values in browser localStorage for further reference
-    // //         $("input[type=text]").on("change", function () {
-    // //             localStorage.setItem(this.id, $(this).val());
-    // //         });
-    // //     }
-    // // });
 
-        $("textarea").val(localStorage.getItem("8"))
-    // $("textarea").each(val){localStorage.getItem("time"));
-    // $("#row-10 .storage").val(localStorage.getItem("10"));
-    // $("#row-11 .storage").val(localStorage.getItem("11"));
-    // $("#row-12 .storage").val(localStorage.getItem("12"));
-    // $("#row-13 .storage").val(localStorage.getItem("13"));
-    // $("#row-14 .storage").val(localStorage.getItem("14"));
-    // $("#row-15 .storage").val(localStorage.getItem("15"));
-    // $("#row-16 .storage").val(localStorage.getItem("16"));
-    // $("#row-17 .storage").val(localStorage.getItem("17"));
+}
+
+// $("#row-8").val(localStorage.removeItem("8"));
+// $("#row-9").val(localStorage.removeItem("9"));
+// $("#row-10").val(localStorage.removeItem("10"));
+// $("#row-11").val(localStorage.removeItem("11"));
+// $("#row-12").val(localStorage.removeItem("12"));
+// $("#row-13").val(localStorage.removeItem("13"));
+// $("#row-14").val(localStorage.removeItem("14"));
+// $("#row-15").val(localStorage.removeItem("15"));
+// $("#row-16").val(localStorage.removeItem("16"));
+// $("#row-17").val(localStorage.removeItem("17"));
+// });
+// }
+
+// }
+
+//     function clearFunction() {
+//     $(".btn-danger").click(function () {
+//         event.preventDefault();
     
-    // // $(".btn-danger").click(function () {
-    // $("textarea").val("")});
+        
+//     })}
+    
+    
 
+    // function completeFunction() {
     // $(".btn-success").click(function () {
-    //     $(this).parent('tr').addClass("complete")}
-    
-    
+    //     event.preventDefault();
+    // $("#row-8").addClass("complete")("8");
+    // $("#row-9").addClass("complete")("9");
+    // $("#row-10").addClass("complete")("10");
+    // $("#row-11").addClass("complete")("11");
+    // $("#row-12").addClass("complete")("12");
+    // $("#row-13").addClass("complete")("13");
+    // $("#row-14").addClass("complete")("14");
+    // $("#row-15").addClass("complete")("15");
+    // $("#row-16").addClass("complete")("16");
+    // $("#row-17").addClass("complete")("17");
+    // })}
