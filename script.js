@@ -79,7 +79,7 @@ $(document).ready(function() {
             var text = rowTd.find("textarea").val();
                 window.localStorage.removeItem(time, text);
                 location.reload(true);
-        })})
+        })
 
     $("#row-8")(window.localStorage.removeItem("8"));
     $("#row-9")(window.localStorage.removeItem("9"));
@@ -91,10 +91,11 @@ $(document).ready(function() {
     $("#row-15")(window.localStorage.removeItem("15"));
     $("#row-16")(window.localStorage.removeItem("16"));
     $("#row-17")(window.localStorage.removeItem("17"));
-    
+    })
 
     $(function clearEvents() {
         $(".btn-success").click(function () {
             localStorage.clear();
+            location.reload(true);
         })
     })})
