@@ -65,36 +65,6 @@ $(window).on("load", function() {
     })
     })
 
-    $(function deleteFunction() {
-    $(".btn-danger").click(function () {
-        var directParent = $(this).parent();
-            console.log("directParent", directParent);
-        var th = directParent.siblings("th");
-            console.log("th", th);
-        var time = th.attr("id");
-            console.log("time", time);
-            console.log("time");
-            console.log(time);
-        var rowTd = directParent.parent();
-            console.log("rowTd", rowTd);
-        var text = rowTd.find("textarea").val();
-            console.log(text);
-        window.localStorage.removeItem(time, text);
-        location.reload(true);
-    })
-
-    ("#row-8")(window.localStorage.removeItem("8"));
-    ("#row-9")(window.localStorage.removeItem("9"));
-    ("#row-10")(window.localStorage.removeItem("10"));
-    ("#row-11")(window.localStorage.removeItem("11"));
-    ("#row-12")(window.localStorage.removeItem("12"));
-    ("#row-13")(window.localStorage.removeItem("13"));
-    ("#row-14")(window.localStorage.removeItem("14"));
-    ("#row-15")(window.localStorage.removeItem("15"));
-    ("#row-16")(window.localStorage.removeItem("16"));
-    ("#row-17")(window.localStorage.removeItem("17"));
-    });
-
     function saveFunction() {
     $(".btn-primary").click(function () {
         event.preventDefault();
@@ -127,5 +97,35 @@ $(window).on("load", function() {
 
     console.log(localStorage);
     console.log(window.localStorage);
+
+    $(function deleteFunction() {
+        $(".btn-danger").click(function () {
+            var directParent = $(this).parent();
+                console.log("directParent", directParent);
+            var th = directParent.siblings("th");
+                console.log("th", th);
+            var time = th.attr("id");
+                console.log("time", time);
+                console.log("time");
+                console.log(time);
+            var rowTd = directParent.parent();
+                console.log("rowTd", rowTd);
+            var text = rowTd.find("textarea").val();
+                console.log(text);
+            window.localStorage.removeItem(time, text);
+            location.reload(true);
+        })
+    
+        ("#row-8")(window.localStorage.removeItem("8"));
+        ("#row-9")(window.localStorage.removeItem("9"));
+        ("#row-10")(window.localStorage.removeItem("10"));
+        ("#row-11")(window.localStorage.removeItem("11"));
+        ("#row-12")(window.localStorage.removeItem("12"));
+        ("#row-13")(window.localStorage.removeItem("13"));
+        ("#row-14")(window.localStorage.removeItem("14"));
+        ("#row-15")(window.localStorage.removeItem("15"));
+        ("#row-16")(window.localStorage.removeItem("16"));
+        ("#row-17")(window.localStorage.removeItem("17"));
+        });
 
     }})
