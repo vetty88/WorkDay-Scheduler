@@ -111,6 +111,7 @@ $(window).on("load", function() {
             var text = rowTd.find("textarea").val();
                 console.log(text);
             window.localStorage.removeItem(time, text);
+            deleteFunction();
             location.reload(true);
         })
     
@@ -125,6 +126,6 @@ $(window).on("load", function() {
         ("#row-16")(window.localStorage.removeItem("16"));
         ("#row-17")(window.localStorage.removeItem("17"));
         });
-        deleteFunction();
+        
 
     }})
