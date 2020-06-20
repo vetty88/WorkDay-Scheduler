@@ -68,8 +68,7 @@ $(document).ready(function() {
     $("#row-16").val(localStorage.getItem("16"));
     $("#row-17").val(localStorage.getItem("17"));
     
-    
-
+    // clear event when delete button is clicked
     $(function deleteFunction() {
         $(".btn-danger").click(function () {
             var directParent = $(this).parent();
@@ -81,16 +80,17 @@ $(document).ready(function() {
                 location.reload(true);
         })
 
-    $("#row-8")(window.localStorage.removeItem("8"));
-    $("#row-9")(window.localStorage.removeItem("9"));
-    $("#row-10")(window.localStorage.removeItem("10"));
-    $("#row-11")(window.localStorage.removeItem("11"));
-    $("#row-12")(window.localStorage.removeItem("12"));
-    $("#row-13")(window.localStorage.removeItem("13"));
-    $("#row-14")(window.localStorage.removeItem("14"));
-    $("#row-15")(window.localStorage.removeItem("15"));
-    $("#row-16")(window.localStorage.removeItem("16"));
-    $("#row-17")(window.localStorage.removeItem("17"));
+    ("#row-8")(window.localStorage.removeItem("8"));
+    ("#row-9")(window.localStorage.removeItem("9"));
+    ("#row-10")(window.localStorage.removeItem("10"));
+    ("#row-11")(window.localStorage.removeItem("11"));
+    ("#row-12")(window.localStorage.removeItem("12"));
+    ("#row-13")(window.localStorage.removeItem("13"));
+    ("#row-14")(window.localStorage.removeItem("14"));
+    ("#row-15")(window.localStorage.removeItem("15"));
+    ("#row-16")(window.localStorage.removeItem("16"));
+    ("#row-17")(window.localStorage.removeItem("17"));
+    deleteFunction();
     })
 
     $(function clearEvents() {
