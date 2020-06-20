@@ -59,9 +59,19 @@ $(document).ready(function() {
 
     colorChange();
     saveFunction();
-    deleteFunction();
+
     
 });
+
+$(function clearEvents() {
+    $(".btn-success").click(function () {
+    console.log(localStorage);
+    localStorage.clear();
+    
+    })
+    location.reload(true);
+    clearEvents();
+})
 
 function saveFunction() {
     $(".btn-primary").click(function () {
@@ -96,6 +106,7 @@ function saveFunction() {
     console.log(localStorage);
     console.log(window.localStorage);
 
+    
 $(function deleteFunction() {
     $(".btn-danger").click(function () {
         
@@ -126,46 +137,5 @@ $(function deleteFunction() {
     ("#row-16")(window.localStorage.removeItem("16"));
     ("#row-17")(window.localStorage.removeItem("17"));
     });
-
-    
-
-}
-
-// $("#row-8").val(localStorage.removeItem("8"));
-// $("#row-9").val(localStorage.removeItem("9"));
-// $("#row-10").val(localStorage.removeItem("10"));
-// $("#row-11").val(localStorage.removeItem("11"));
-// $("#row-12").val(localStorage.removeItem("12"));
-// $("#row-13").val(localStorage.removeItem("13"));
-// $("#row-14").val(localStorage.removeItem("14"));
-// $("#row-15").val(localStorage.removeItem("15"));
-// $("#row-16").val(localStorage.removeItem("16"));
-// $("#row-17").val(localStorage.removeItem("17"));
-// });
-// }
-
-// }
-
-//     function clearFunction() {
-//     $(".btn-danger").click(function () {
-//         event.preventDefault();
-    
-        
-//     })}
-    
-    
-
-    // function completeFunction() {
-    // $(".btn-success").click(function () {
-    //     event.preventDefault();
-    // $("#row-8").addClass("complete")("8");
-    // $("#row-9").addClass("complete")("9");
-    // $("#row-10").addClass("complete")("10");
-    // $("#row-11").addClass("complete")("11");
-    // $("#row-12").addClass("complete")("12");
-    // $("#row-13").addClass("complete")("13");
-    // $("#row-14").addClass("complete")("14");
-    // $("#row-15").addClass("complete")("15");
-    // $("#row-16").addClass("complete")("16");
-    // $("#row-17").addClass("complete")("17");
-    // })}
+    deleteFunction(); 
+};
