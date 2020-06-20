@@ -55,7 +55,6 @@ $(window).on("load", function() {
         });
     }
 
-    deleteFunction();
     clearEvents();
 
     $(function clearEvents() {
@@ -127,5 +126,6 @@ $(window).on("load", function() {
         ("#row-16")(window.localStorage.removeItem("16"));
         ("#row-17")(window.localStorage.removeItem("17"));
         });
+        deleteFunction();
 
     }})
