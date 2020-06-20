@@ -55,13 +55,12 @@ $(window).on("load", function() {
         });
     }
 
-    clearEvents();
-
     $(function clearEvents() {
     $(".btn-success").click(function () {
             console.log(localStorage);
         localStorage.clear();
     })
+    clearEvents();
     })
 
     function saveFunction() {
