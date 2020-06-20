@@ -8,7 +8,7 @@ $(document).ready(function() {
     $("#timeNow").append(time);
 
     // display welcome greeting    // 
-    function greeting() {
+    $(function greeting() {
         var currentHour = moment().hours();
         var greeting;
             if (currentHour < 12) {
@@ -22,7 +22,8 @@ $(document).ready(function() {
             }
             document.getElementById("demo").innerHTML = greeting;
             }
-            greeting();
+    );
+    
 
     // format row color based on current time of day               //  
     $(function colorChange() {
@@ -40,10 +41,8 @@ $(document).ready(function() {
                 $(this).parent('tr').removeClass("past");
                 $(this).parent('tr').removeClass("present");
                 $(this).parent('tr').addClass("future");
-            }
-            colorChange();
-        }    
-    )})
+        }
+    })})
     // save typed events for each hour when save button clicked
 
     $(function saveFunction() {
@@ -98,5 +97,4 @@ $(document).ready(function() {
         $(".btn-success").click(function () {
             localStorage.clear();
         })
-        clearEvents()
     })})
