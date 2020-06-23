@@ -45,33 +45,33 @@ $(document).ready(function() {
     })})
     // save typed events for each hour when save button clicked
 
-    $(function saveFunction(event) {
-        $(".btn-primary").click(function () {
+        $(".btn-primary").click(function (event) {
             event.preventDefault();
-
-        var directParent = $(this).parent();
-        var th = directParent.siblings("th");
-        var time = th.attr("id");
-        var rowTd = directParent.parent();
-        var text = rowTd.find("textarea").val();
-        localStorage.setItem(time, text);
+            console.log(event.target);
+            var time = event.target.id;
+            console.log(time);
+            var row = $(event.target).parent().parent();
+            console.log(row);
+            var text = row.find("textarea").val();
+            console.log(text);
+            localStorage.setItem(time, text);
     })})
     
-    var i (for i = 8; i < 18; i++) {
+    var i;
+    for (i = 8; i < 18; i++) {
     
     $("#row-" + i).val(localStorage.getItem(i));
         
     }
    
         $(".btn-danger").click(function (event) {
-            console.table(this);
-            console.table(event.target);
-            var time = event.target.attr("id");
-            var text = document.getElementById("row-" + time).value = "";
-                window.localStorage.removeItem(time);
+            console.log(event);
+            var time = event.target.id;
+            localStorage.removeItem(time);
+            location.reload(true);
         })
 
-        $(".btn-success").click(function (event) {
+        $(".btn-success").click(function () {
             localStorage.clear();
-            location.reload(true);
-    })})
+            
+    })
