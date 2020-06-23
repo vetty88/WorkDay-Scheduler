@@ -25,7 +25,7 @@ $(document).ready(function() {
     );
     
 
-    // format row color based on current time of day               //  
+    // format row color based on current time of day //  
     $(function colorChange() {
         $(".time-block").each(function () {
         var hourNum = parseInt($(this).attr("id"));
@@ -45,7 +45,7 @@ $(document).ready(function() {
     })})
     // save typed events for each hour when save button clicked
 
-    $(function saveFunction() {
+    $(function saveFunction(event) {
         $(".btn-primary").click(function () {
             event.preventDefault();
 
@@ -57,45 +57,21 @@ $(document).ready(function() {
         localStorage.setItem(time, text);
     })})
     
-    $("#row-8").val(localStorage.getItem("8"));
-    $("#row-9").val(localStorage.getItem("9"));
-    $("#row-10").val(localStorage.getItem("10"));
-    $("#row-11").val(localStorage.getItem("11"));
-    $("#row-12").val(localStorage.getItem("12"));
-    $("#row-13").val(localStorage.getItem("13"));
-    $("#row-14").val(localStorage.getItem("14"));
-    $("#row-15").val(localStorage.getItem("15"));
-    $("#row-16").val(localStorage.getItem("16"));
-    $("#row-17").val(localStorage.getItem("17"));
+    var i (for i = 8; i < 18; i++) {
     
-    // clear event when delete button is clicked
-    $(function deleteFunction() {
-        $(".btn-danger").click(function () {
-            var directParent = $(this).parent();
-            var th = directParent.siblings("th");
-            var time = th.attr("id");
-            var rowTd = directParent.parent();
-            var text = rowTd.find("textarea").val();
-                window.localStorage.removeItem(time, text);
-                location.reload(true);
-        })});
+    $("#row-" + i).val(localStorage.getItem(i));
+        
+    }
+   
+        $(".btn-danger").click(function (event) {
+            console.table(this);
+            console.table(event.target);
+            var time = event.target.attr("id");
+            var text = document.getElementById("row-" + time).value = "";
+                window.localStorage.removeItem(time);
+        })
 
-    $("#row-8")(window.localStorage.removeItem("8"));
-    $("#row-9")(window.localStorage.removeItem("9"));
-    $("#row-10")(window.localStorage.removeItem("10"));
-    $("#row-11")(window.localStorage.removeItem("11"));
-    $("#row-12")(window.localStorage.removeItem("12"));
-    $("#row-13")(window.localStorage.removeItem("13"));
-    $("#row-14")(window.localStorage.removeItem("14"));
-    $("#row-15")(window.localStorage.removeItem("15"));
-    $("#row-16")(window.localStorage.removeItem("16"));
-    $("#row-17")(window.localStorage.removeItem("17"));
-
-    deleteFunction();
-
-    $(function clearEvents() {
-        $(".btn-success").click(function () {
+        $(".btn-success").click(function (event) {
             localStorage.clear();
             location.reload(true);
-        })
     })})
