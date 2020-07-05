@@ -14,7 +14,7 @@ Repository created in Github Added edited code to folder, pushed to githhub repo
 Launched via Github hosting (github.io)
 
 Screenshot of Project (Google Chrome): 
-![Screenshot] (./Assets/Screenshot.PNG)
+![Screenshot] (./Assets/Screenshot.PNG?raw=true)
 Web URL: https://vetty88.github.io/WorkDay-Scheduler/
 Repo: https://github.com/vetty88/WorkDay-Scheduler
 
